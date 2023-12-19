@@ -1,0 +1,1 @@
+This project demonstrates the creation of an interactive navigation menu using HTML, CSS, and JavaScript. The navigation menu includes responsive design, a fixed position, and dynamic color changes on scroll and hover.
