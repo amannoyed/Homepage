@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Page Title Styles */
+    h1 {
+      text-align: center;
+      margin: 0;
+      padding: 20px 0;
+      background-color: #2c3e50; /* Change the header color */
+      color: #ffffff;
+    }
+
+    /* Style the navigation bar */
+    .navbar {
+      background-color: #3498db; /* Set the initial background color */
+      transition: background-color 0.5s ease; /* Add a smooth transition effect */
+      position: fixed; /* Make the navbar stick to the top of the page */
+      top: 70px; /* Position the navbar below the header */
+      width: 100%; /* Set the width of the navbar to 100% of the page */
+      overflow: hidden; /* Hide any overflowing content */
+    }
+
+    /* Style the links inside the navigation bar */
+    .navbar a {
+      float: left; /* Align the links to the left */
+      display: block; /* Display the links as block elements */
+      color: #f2f2f2; /* Set the text color to white */
+      text-align: center; /* Center the text inside the links */
+      padding: 14px 0; /* Add some padding to the links */
+      text-decoration: none; /* Remove the underline from the links */
+      font-size: 17px; /* Set the font size of the links */
+      width: 25%; /* Make each link take 25% of the width */
+      box-sizing: border-box; /* Include padding and border in the width */
+      transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect for background and text color */
+    }
+
+    /* Change the color of links on hover */
+    .navbar a:hover {
+      background-color: #2c3e50; /* Set the background color to a darker shade */
+      color: #ffffff; /* Set the text color to white on hover */
+    }
+
+    /* Add an active class to highlight the current page */
+    .navbar a.active {
+      background-color: #e74c3c; /* Set the background color to a different color */
+      color: #ffffff; /* Set the text color to white */
+    }
+
+    /* Hide the icon that toggles the menu on small screens */
+    .navbar .icon {
+      display: none; /* Hide the icon by default */
+    }
+
+    /* Use media queries to change the style of the navbar on different screen sizes */
+    @media screen and (max-width: 600px) {
+      /* When the screen is less than 600 pixels wide, hide all links except the first one ("Home") */
+      .navbar a:not(:first-child) {display: none;}
+      /* Show the icon that toggles the menu */
+      .navbar a.icon {
+        float: right; /* Align the icon to the right */
+        display: block; /* Display the icon as a block element */
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      /* When the user clicks on the icon, display the links vertically instead of horizontally */
+      .navbar.responsive {position: relative;}
+      .navbar.responsive a.icon {
+        position: absolute; /* Position the icon absolutely */
+        right: 0; /* Place the icon at the right corner */
+        top: 0; /* Place the icon at the top corner */
+      }
+      .navbar.responsive a {
+        float: none; /* Do not align the links to the left */
+        display: block; /* Display the links as block elements */
+        text-align: left; /* Align the text to the left */
+        width: 100%; /* Make each link take 100% of the width */
+        box-sizing: border-box; /* Include padding and border in the width */
+      }
+    }
+
+    /* Website Layout Styles */
+    .content {
+      padding: 90px 16px 20px; /* Add space for the fixed navbar and adjust padding */
+    }
+
+    .main {
+      margin: 20px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Title -->
+  <h1>Your Page Title</h1>
+
+  <!-- Create a navigation bar with four links -->
+  <div class="navbar" id="navbar">
+    <a href="#home" class="active" onmouseover="changeColor(this)" onmouseout="restoreColor(this)">Home</a>
+    <a href="#news" onmouseover="changeColor(this)" onmouseout="restoreColor(this)">News</a>
+    <a href="#contact" onmouseover="changeColor(this)" onmouseout="restoreColor(this)">Contact</a>
+    <a href="#about" onmouseover="changeColor(this)" onmouseout="restoreColor(this)">About</a>
+    <!-- Add an icon to toggle the menu on small screens -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="main">
+      <p>Your page content...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2023 Your Company Name</p>
+  </div>
+
+  <script>
+    // Your existing JavaScript code remains unchanged
+  </script>
+
+</body>
+</html>
